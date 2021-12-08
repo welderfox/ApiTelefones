@@ -43,7 +43,7 @@ namespace ApiTelefone.Controllers
 
 			_telefoneRepositorio.Add(loja);
 			//return Json(loja);
-			return CreatedAtRoute("GetLoja", new Telefones { iduser = loja.iduser }, loja);
+			return CreatedAtRoute("GetLoja", new Telefones { IdUser = loja.IdUser }, loja);
 		}
 
 		[HttpPut("{id}")]
@@ -61,9 +61,9 @@ namespace ApiTelefone.Controllers
 				return BadRequest();
 
 			}
-			novaLoja.loja = loja.loja;
+			novaLoja.Loja = loja.Loja;
 			novaLoja.Fone = loja.Fone;
-			novaLoja.cell = loja.cell;
+			novaLoja.Cell = loja.Cell;
 			_telefoneRepositorio.Update(novaLoja);
 			return Json(novaLoja);
 
