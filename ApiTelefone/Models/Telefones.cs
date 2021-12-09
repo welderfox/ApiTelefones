@@ -9,5 +9,14 @@ namespace ApiTelefone.Models
 		public string Loja { get; set; }
 		public string Fone { get; set; }
 		public string Cell { get; set; }
+
+        public Telefones(){}
+
+        public Telefones(string loja, string fone, string cell)
+        {
+			Loja = loja;
+			Fone = fone;
+			Cell = cell;
+        }
 	}
 }
